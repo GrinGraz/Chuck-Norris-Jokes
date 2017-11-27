@@ -6,11 +6,12 @@ import javax.inject.Inject
 
 
 open class JokeMapper @Inject constructor(): Mapper<JokeEntity, Joke> {
-    override fun mapToEntity(type: Joke): JokeEntity{
-        return JokeEntity(type.category, type.icon_url, type.id, type.url, type.value)
+
+    override fun mapFromEntity(type: JokeEntity): Joke {
+        return Joke(type.category, type.icon_url, type.id, type.url, type.value)
     }
 
-    override fun mapFromEntity(type: Joke): JokeEntity {
+    override fun mapToEntity(type: Joke): JokeEntity{
         return JokeEntity(type.category, type.icon_url, type.id, type.url, type.value)
     }
 }
