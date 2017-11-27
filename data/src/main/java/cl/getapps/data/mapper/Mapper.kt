@@ -10,7 +10,7 @@ package cl.getapps.data.mapper
  */
 interface Mapper<E, D>{
 
-    fun mapToEntity(type: E): D
+    fun mapToEntity(type: D): E
 
-    fun mapFromEntity(type: D): E
+    fun mapFromEntity(type: E): D
 }

@@ -1,5 +1,6 @@
 package cl.getapps.data.executor
 
+import cl.getapps.domain.executor.ThreadExecutor
 import java.util.concurrent.LinkedBlockingQueue
 import java.util.concurrent.ThreadFactory
 import java.util.concurrent.ThreadPoolExecutor
@@ -9,7 +10,7 @@ import javax.inject.Inject
 /**
  * Decorated [ThreadPoolExecutor]
  */
-open class JobExecutor @Inject constructor(): ThreadExecutor{
+open class JobExecutor @Inject constructor(): ThreadExecutor {
     private val workQueue: LinkedBlockingQueue<Runnable>
 
     private val threadPoolExecutor: ThreadPoolExecutor
