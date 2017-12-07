@@ -20,7 +20,7 @@ open class JokeRemoteDataStore
     }
 
     override fun getJokes(): Single<List<JokeEntity>> {
-        return jokeRemote.getBufferoos()
+        return jokeRemote.getJokes()
     }
 
 }

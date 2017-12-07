@@ -8,5 +8,5 @@ import io.reactivex.Single
  * cache layer, using this interface as a way of communicating.
  */
 interface JokeRemote {
-    fun getBufferoos(): Single<List<JokeEntity>>
+    fun getJokes(): Single<List<JokeEntity>>
 }
